@@ -49,6 +49,11 @@ The system emphasizes secure authentication, API protection, client-side role gu
 
 ---
 
+## screenshot
+
+<img width="1919" height="1023" alt="Screenshot 2025-07-30 150817" src="https://github.com/user-attachments/assets/79d053d0-2515-4b58-b545-1ec32e7b9d6b" />
+
+
 ## Tech Stack
 
 | Layer     | Technology                 |

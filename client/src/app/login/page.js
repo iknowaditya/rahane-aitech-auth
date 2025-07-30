@@ -96,7 +96,7 @@ export default function Login() {
         </CardContent>
         <CardFooter className="flex flex-col items-center gap-2">
           <p className="text-sm text-muted-foreground">
-            Don't have an account?{" "}
+            Don&rsquo;t have an account?{" "}
             <Button
               variant="link"
               className="px-0 text-blue-600 dark:text-blue-400"

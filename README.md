@@ -71,32 +71,54 @@ The system emphasizes secure authentication, API protection, client-side role gu
 
 ## Folder Structure
 
-├── admin
-│   ├── logs
-│   │   └── page.js # Admin logs page (protected)
-│   └── users
-│   └── page.js # Admin users management (protected)
-├── components
-│   ├── Layout.jsx # Client root Layout with user state
-│   ├── Navbar.jsx # Navbar component with login/logout
-│   ├── ThemeToggle.jsx # Theme toggler (shadcn-ui)
-│   └── roleGuard.js # Client role guard hook
-├── editor
-│   └── content
-│   └── page.js # Editor content management (protected)
-├── login
-│   └── page.js # Login page
-├── register
-│   └── page.js # Register page
-├── viewer
-│   └── content
-│   └── page.js # Viewer content page (read-only)
-├── api.js # Axios API helper
-├── context
-│   └── AuthContext.jsx # React Context for auth state (+ login/logout)
-├── globals.css # Global Tailwind CSS styles
-├── layout.js # Server root layout file wrapping ThemeProvider + Layout
-└── page.js # Root page that redirects based on user role
+/admin-dashboard
+├── server
+│   ├── controllers
+│   │   ├── authController.js
+│   │   ├── userController.js
+│   │   ├── contentController.js
+│   │   └── logController.js
+│   ├── middlewares
+│   │   └── authMiddleware.js
+│   ├── models
+│   │   ├── User.js
+│   │   ├── Post.js
+│   │   └── Log.js
+│   ├── routes
+│   │   ├── authRoutes.js
+│   │   ├── userRoutes.js
+│   │   ├── contentRoutes.js
+│   │   └── logRoutes.js
+│   ├── server.js
+│   └── config.js
+│
+├── client
+│   ├── app
+│   │   ├── api.js
+│   │   ├── components
+│   │   │   ├── ThemeToggle.jsx
+│   │   │   ├── Layout.jsx
+│   │   │   └── roleGuard.js
+│   │   ├── pages
+│   │   │   ├── _app.js
+│   │   │   ├── index.jsx
+│   │   │   ├── login.jsx
+│   │   │   ├── admin
+│   │   │   │   ├── index.jsx
+│   │   │   │   ├── users.jsx
+│   │   │   │   └── logs.jsx
+│   │   │   ├── editor
+│   │   │   │   └── content.jsx
+│   │   │   └── viewer
+│   │   │       └── content.jsx
+│   ├── styles
+│   │   └── globals.css
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   └── next.config.js
+│
+
+
 
 
 ---
@@ -189,16 +211,4 @@ Please maintain code quality and add tests for new features.
 
 ## License
 
-MIT License © Your Name
-
----
-
-### Contact & Help
-
-If you need help setting up or extending this project, feel free to reach out or create an issue.
-
----
-
-*This project was generated with modern Next.js 13 architecture and best full-stack practices.*
-
-
+MIT License © Hanu
